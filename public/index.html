@@ -10,18 +10,32 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+  <div class="app-wrapper">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <span class="sidebar-logo">🌿 MealPlannerID</span>
+        <button id="new-chat-btn">+ Chat Baru</button>
+      </div>
+      <div class="sidebar-history">
+        <p class="history-label">Riwayat Chat</p>
+        <ul id="history-list"></ul>
+      </div>
+    </div>
+    <!-- Main Chat -->
     <div class="container">
-    <h1>MealPlanID Chatbot</h1>
-    <div id="chat-box" class="chat-box"></div>
-    <form id="chat-form">
-      <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off" required />
-      <input type="file" id="file-input" accept="image/*,application/pdf,audio/*" style="display: none;" />
-      <button type="button" id="file-button">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-paperclip"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
-      </button>
-      <button type="submit">Send</button>
-    </form>
-    <div id="image-preview-container" class="image-preview-container"></div>
+      <h1>MealPlannerID</h1>
+      <div id="chat-box" class="chat-box"></div>
+      <div id="image-preview-container" class="image-preview-container"></div>
+      <form id="chat-form">
+        <input type="text" id="user-input" placeholder="Ketik pesan Anda..." autocomplete="off" />
+        <input type="file" id="file-input" accept="image/*,application/pdf,audio/*" style="display: none;" />
+        <button type="button" id="file-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-paperclip"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
+        </button>
+        <button type="submit">Kirim</button>
+      </form>
+    </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
   <script src="script.js"></script>
